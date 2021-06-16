@@ -1,0 +1,88 @@
+//Обнуления///////////////////////////////////////////////////////////////////////////////////////////////
+html{
+	box-sizing: border-box;
+	height: 100%;
+	min-width: $minWidth;
+	& *{
+		padding: 0;
+		margin: 0;
+		border: none;
+		outline: none;
+	}
+}
+*, *::before, *::after{
+	box-sizing: inherit;
+	transition: all .3s;
+}
+body{
+	height: 100%;
+	min-width: $minWidth;
+	line-height: 1;
+	font-family: $fontFamily;
+	color: $text;
+	@include adaptive(font-size, 18, 14, 3);
+	font-weight: 400;
+	background-color: $bg;
+}
+h1, h2, h3, h4, h5, h6, p{
+	font-weight: inherit;
+	line-height: inherit;
+	font-size: inherit;
+	padding: 0;
+	margin: 0;
+}
+textarea{
+	resize: none;
+}
+input, button, textarea{
+	font-family: $fontFamily;
+	font-size: inherit;
+	background-color: transparent;
+	line-height: inherit;
+	
+}
+button{
+	cursor: pointer;
+}
+input:not([type=checkbox]):not([type=radio]),
+textarea, 
+select,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+a{
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+}
+ul, li{
+	list-style: none;
+}
+
+//Прижимаем футер к низу///////////////////////////////////////////////////////////////////////////////////////////////
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	overflow-x: hidden;
+	@media (min-width: $md4 + px){
+		overflow-x: visible;
+	}
+}
+.content{
+	flex: 1 0 auto;
+}
+.footer{
+	flex: 0 0 auto;
+}
+
+//Дежурные классы///////////////////////////////////////////////////////////////////////////////////////////////
+._container {
+	max-width: $maxWidthContainer;
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}

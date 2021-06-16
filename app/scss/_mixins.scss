@@ -1,0 +1,56 @@
+//Переменные ///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Цвета
+$bg: #171718; //Фон всего сайта body
+$text: #fff; //Цвет основного текста body
+$el: #EF8B54; //Цвет для одинаковых элементов
+$header: #202020; //Цвет шапки .header
+
+//Шрифт по умолчанию body
+$fontFamily: 'Montserrat', sans-serif;
+
+//Размеры экранов и контейнеров
+$minWidth: 320px; //Минимальная адаптивная ширина экрана
+$maxWidth: 1920; //Макетная ширина экрана
+$maxWidthContainer: 1500; //Максимальная ширина контейнера
+$row: 45px; //Высота строк мобильного меню
+
+//Медиа запросы
+$md1: $maxWidthContainer;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+//Миксины ///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Адаптивное свойство
+@mixin adaptive($property, $startSize, $minSize, $type){
+	$addSize: $startSize - $minSize;
+	@if $type==1{
+		//Если меньше контейнера
+		#{$property}: $startSize + px;
+		@media (max-width: #{$maxWidth + px}){
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+		}
+	} @else if $type==2{
+		//Если больше контейнера
+		#{$property}: $startSize + px;
+		@media (min-width: #{$maxWidth + px}){
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+		}
+	} @else {
+		//Всегда работает
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+	}
+}
+
+//Подключение шрифтов
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}

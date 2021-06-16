@@ -1,0 +1,153 @@
+.header {
+	position: relative;
+	background-color: $header;
+	z-index: 100;
+	&__body{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include adaptive(height, 60, 45, 3);
+	}
+}
+
+//Стилизация меню с выезжающими пунктами слева по одному с небольшой задержкой////////////////////////////////////////////////////////////////////////////////////////////////
+// .menu {
+// 	text-transform: uppercase;
+// 	font-size: 20px;
+// 	&__btn{
+// 		display: none;
+// 		@media (max-width: $md3 + px){
+// 			display: block;
+// 		}
+// 		width: 30px;
+// 		height: 20px;
+// 		position: relative;
+// 		cursor: pointer;
+// 		&:before{
+// 			content:'';
+// 			position: absolute;
+// 			top: 0;
+// 			left: 0;
+// 			width: 100%;
+// 			height: 2px;
+// 			background-color: $text;
+// 		}
+// 		&:after{
+// 			content:'';
+// 			position: absolute;
+// 			bottom: 0;
+// 			left: 0;
+// 			width: 100%;
+// 			height: 2px;
+// 			background-color: $text;
+// 		}
+// 		span{
+// 			position: absolute;
+// 			width: 100%;
+// 			height: 2px;
+// 			left: 0;
+// 			top: 9px;
+// 			background-color: $text;
+// 		}
+// 		&.open{
+// 			&::after{
+// 				transform: rotate(45deg);
+// 				bottom: 9px;
+// 			}
+// 			&::before{
+// 				transform: rotate(-45deg);
+// 				top: 9px;
+// 			}
+// 			span{
+// 				transform: scale(0);
+// 			}
+// 		}
+// 	}
+// 	&__body{
+// 		@media (max-width: $md3 + px){
+// 			left: 0;
+// 			position: absolute;
+// 			width: 100%;
+// 			@include adaptive(top, 60, 45, 3);
+// 			&.open{
+// 				.menu__row{
+// 					left: 0;
+// 				}
+// 			}
+// 		}
+// 	}
+// 	&__row{
+// 		display: inline-block;
+// 		& + .menu__row{
+// 			margin-left: 20px;
+// 			@media (max-width: $md3 + px){
+// 				margin-left: 0;
+// 			}
+// 		}
+// 		@media (max-width: $md3 + px){
+// 			background-color: $header;
+// 			display: block;
+// 			position: absolute;
+// 			width: 100%;
+// 			top: 0;
+// 			left: -100%;
+// 			&:nth-child(2){
+// 				top: $row;
+// 				transition: all .5s;
+// 			}
+// 			&:nth-child(3){
+// 				top: $row * 2;
+// 				transition: all .7s;
+// 			}
+// 			&:nth-child(4){
+// 				top: $row * 3;
+// 				transition: all .9s;
+// 			}
+// 			&:nth-child(5){
+// 				top: $row * 4;
+// 				transition: all 1.1s;
+// 			}
+// 			&:nth-child(6){
+// 				top: $row * 5;
+// 				transition: all 1.3s;
+// 			}
+// 			&:nth-child(7){
+// 				top: $row * 6;
+// 				transition: all 1.5s;
+// 			}
+// 			&:nth-child(8){
+// 				top: $row * 7;
+// 				transition: all 1.7s;
+// 			}
+// 			&:nth-child(9){
+// 				top: $row * 8;
+// 				transition: all 1.9s;
+// 			}
+// 			&:nth-child(10){
+// 				top: $row * 9;
+// 				transition: all 2.1s;
+// 			}
+// 		}
+// 	}
+// 	&__link{
+// 		border-bottom: 1px solid transparent;
+// 		display: block;
+// 		@media (max-width: $md3 + px){
+// 			height: $row;
+// 			display: flex;
+// 			align-items: center;
+// 			justify-content: center;
+// 			border-bottom: 1px solid $hover;
+// 		}
+// 		@media (min-width: $md2 + px){
+// 			&:hover{
+// 				color: $hover;
+// 				border-bottom: 1px solid $hover;
+// 			}
+// 			&:focus{
+// 				color: $hover;
+// 				border-bottom: 1px solid $hover;
+// 			}
+// 		}
+// 	}
+// }

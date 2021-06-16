@@ -1,0 +1,38 @@
+._popup{
+	@include adaptive(padding, 20, 10, 3);
+	background: $hover;
+}
+
+//Политика обработки, оферта и т. п.
+.private {
+	&__title{
+		text-transform: uppercase;
+		@include adaptive(font-size, 36, 24, 3);
+		@include adaptive(margin-bottom, 20, 10, 3);
+	}
+	&__descr{
+		margin-bottom: 10px;
+	}
+	&__subtitle{
+		@include adaptive(font-size, 36, 24, 3);
+		margin-bottom: 10px;
+		span{
+			color: $el;
+		}
+	}
+	&__row{
+		padding: 0px 0px 0px 15px;
+		@include adaptive(margin-left, 15, 8, 3);
+		position: relative;
+		&:before{
+			content:'';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 5px;
+			height: 5px;
+			border-radius: 50%;
+			background-color: $el;
+		}
+	}
+}
