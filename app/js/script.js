@@ -15,5 +15,13 @@ testWebP(function (support) {
 	}
 });
 $(function () {
-
+	$('.menu__btn, .menu__body').on('click', function () {
+		$('.menu__btn, .menu__body').toggleClass('open');
+	});
+	$(document).on('click', function (e) {
+		if (!$('.menu__btn').is(e.target) && $('.menu__btn').has(e.target).length === 0 &&
+			!$('.menu__body').is(e.target) && $('.menu__body').has(e.target).length === 0) {
+			$('.menu__body, .menu__btn').removeClass('open');
+		}
+	});
 });

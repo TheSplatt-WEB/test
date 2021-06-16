@@ -1,0 +1,167 @@
+.footer{
+	background-color: $header;
+	padding-top: 50px;
+	@include adaptive(padding-bottom, 66, 50, 3);
+	&__body{
+		text-align: center;
+		*:last-child{
+			margin-bottom: 0;
+		}
+		@media (min-width: $md4 + px){
+			display: flex;
+			flex-wrap: wrap;
+		}
+		@media (min-width: $md2 + px){
+			justify-content: space-between;
+		}
+	}
+	&__logo{
+		margin-bottom: 50px;
+		transition: transform .3s;
+		@media (min-width: $md2 + px){
+			&:hover{
+				transform: scale(1.02);
+			}
+			&:focus{
+				transform: scale(1.02);
+			}
+		}
+		@media (min-width: $md4 + px){
+			width: 100%;
+		}
+		@media (min-width: $md3 + px){
+			width: 33.33%;
+			margin-top: 17px;
+			padding-right: 10px;
+		}
+		@media (min-width: $md2 + px){
+			width: auto;
+		}
+	}
+	&__contacts{
+		margin-bottom: 30px;
+		@media (min-width: $md4 + px){
+			width: 50%;
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+		@media (min-width: $md3 + px){
+			width: 33.33%;
+			text-align: left;
+		}
+		@media (min-width: $md2 + px){
+			width: auto;
+		}
+	}
+	&__title{
+		font-size: 18px;
+		line-height: 22px;
+		font-weight: 600;
+		opacity: .5;
+		margin-bottom: 14px;
+	}
+	&__list{
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 300;
+	}
+	&__row{
+		& + &{
+			margin-top: 14px;
+		}
+	}
+	&__link{
+		transition: color .3s;
+		@media (min-width: $md2 + px){
+			&:hover{
+				color: $el;
+			}
+			&:focus{
+				color: $el;
+			}
+		}
+	}
+	&__social{
+		margin-bottom: 40px;
+		@media (min-width: $md4 + px){
+			width: 50%;
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+		@media (min-width: $md3 + px){
+			width: 33.33%;
+			text-align: left;
+		}
+		@media (min-width: $md2 + px){
+			width: auto;
+		}
+	}
+	&__map{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+		margin-bottom: 30px;
+		@media (min-width: $md2 + px){
+			margin: 0;
+			padding-left: 10px;
+		}
+	}
+}
+.logo-footer{
+	@include adaptive(width, 158, 124, 3);
+}
+.map{
+	&__link{
+		width: 133px;
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 300;
+		text-align: left;
+		padding-right: 45px;
+		margin-right: 26px;
+		position: relative;
+		transition: color .3s;
+		&::before{
+			content:'';
+			position: absolute;
+			top: 50%;
+			right: 0;
+			width: 18px;
+			height: 50px;
+			background-image: url(../img/arrow_right-big.svg);
+			transform: translate(0, -50%);
+		}
+		@media (min-width: $md2 + px){
+			&:hover{
+				color: $el;
+			}
+			&:focus{
+				color: $el;
+			}
+		}
+	}
+	&__img{
+		@include adaptive(height, 100, 80, 3);
+		@include adaptive(width, 100, 80, 3);
+		border-radius: 50%;
+		position: relative;
+		transition: transform .3s;
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		@media (min-width: $md2 + px){
+			&:hover{
+				transform: scale(1.02);
+			}
+			&:focus{
+				transform: scale(1.02);
+			}
+		}
+	}
+}

@@ -12,7 +12,6 @@ html{
 }
 *, *::before, *::after{
 	box-sizing: inherit;
-	transition: all .3s;
 }
 body{
 	height: 100%;
@@ -20,7 +19,6 @@ body{
 	line-height: 1;
 	font-family: $fontFamily;
 	color: $text;
-	@include adaptive(font-size, 18, 14, 3);
 	font-weight: 400;
 	background-color: $bg;
 }
@@ -79,8 +77,8 @@ ul, li{
 }
 
 //Дежурные классы///////////////////////////////////////////////////////////////////////////////////////////////
-._container {
-	max-width: $maxWidthContainer;
+.container {
+	max-width: $maxWidthContainer + px;
 	width: 100%;
 	margin: 0 auto;
 	padding-left: 20px;
