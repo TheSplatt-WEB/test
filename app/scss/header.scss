@@ -1,5 +1,9 @@
-.header {
-	position: relative;
+.header{
+	position: fixed;
+	min-width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
 	background-color: $header;
 	z-index: 100;
 	&__body{
@@ -79,7 +83,7 @@
 .menu {
 	font-size: 14px;
 	line-height: 17px;
-	font-weight: 600;
+	font-weight: 700;
 	@media (min-width: $md3 + px){
 		margin-left: auto;
 	}
@@ -154,7 +158,9 @@
 		position: absolute;
 		width: 100%;
 		@include adaptive(top, 90, 50, 3);
+		pointer-events: none;
 		&.open{
+			pointer-events: auto;
 			.menu__row{
 				transform: translate(0, 0);
 			}
@@ -162,6 +168,7 @@
 		@media (min-width: $md1 + px){
 			position: static;
 			width: auto;
+			pointer-events: auto;
 		}
 	}
 	&__row{

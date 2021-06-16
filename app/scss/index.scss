@@ -1,0 +1,205 @@
+.top{
+	background-image: url(../img/top_bg-mobile.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+	@media (min-width: $md3 + px){
+		background-image: url(../img/top_bg.png);
+		padding-bottom: 300px;
+		margin-bottom: -90px;
+	}
+	&__body{
+		@include adaptive(padding-top, 200, 30, 3);
+		position: relative;
+		&::before{
+			content:'E';
+			text-transform: uppercase;
+			font-size: 545px;
+			line-height: 375px;
+			font-weight: 700;
+			opacity: .015;
+			position: absolute;
+			top: 122px;
+			left: 100px;
+			width: 300px;
+			height: 385px;
+			z-index: 2;
+			@media (min-width: $md4 + px){
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+			}
+			@media (min-width: $md3 + px){
+				left: auto;
+				right: 0;
+				opacity: .03;
+				@include adaptive(font-size, 1090, 545, 3);
+				@include adaptive(line-height, 750, 375, 3);
+			}
+			@media (min-width: $md1 + px){
+				top: 80px;
+				right: 320px;
+			}
+		}
+		&::after{
+			content:'';
+			position: absolute;
+			top: 173px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			background: linear-gradient(180deg, rgba(167, 47, 114, 0.7) 0%, rgba(255, 106, 106, 0) 100%);
+			filter: drop-shadow(0px -4.60728px 9.21456px rgba(0, 0, 0, 0.1));
+			z-index: 1;
+			@media (min-width: $md4 + px){
+				top: 205px;
+			}
+			@media (min-width: $md3 + px){
+				display: none;
+			}
+		}
+	}
+	&__info{
+		*:last-child{
+			margin-bottom: 0;
+		}
+		margin-bottom: 280px;
+	}
+	&__icon{
+		@include adaptive(margin-bottom, 20, 10, 3);
+		@include adaptive(font-size, 23, 12, 3);
+		@include adaptive(line-height, 28, 15, 3);
+		font-weight: 700;
+		color: $el;
+		@include adaptive(padding-left, 31, 17, 3);
+		position: relative;
+		&::before{
+			content:'';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(0, -50%);
+			@include adaptive(width, 19, 10, 3);
+			@include adaptive(height, 19, 10, 3);
+			background-image: url(../img/cart.svg);
+		}
+	}
+	&__title{
+		margin-bottom: 30px;
+		@include adaptive(font-size, 52, 21, 3);
+		@include adaptive(line-height, 70, 28, 3);
+		font-weight: 700;
+		max-width: 824px;
+	}
+	&__descr{
+		display: none;
+		@media (min-width: $md2 + px){
+			display: block;
+			margin-bottom: 30px;
+			font-size: 20px;
+			line-height: 27px;
+		}
+	}
+	&__form{
+
+	}
+	&__img{
+		position: absolute;
+		top: 168px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		height: 252px;
+		z-index: 3;
+		@media (min-width: $md4 + px){
+			top: 200px;
+		}
+		@media (min-width: $md3 + px){
+			@include adaptive(height, 842, 252, 3);
+			left: auto;
+		}
+		@media (min-width: $md1 + px){
+			top: 100px;
+		}
+	}
+}
+.form-top{
+	display: flex;
+	flex-direction: column;
+	max-width: 330px;
+	&__label{
+		display: block;
+		margin-bottom: 15px;
+		font-weight: 300;
+		@include adaptive(font-size, 14, 12, 3);
+		@include adaptive(line-height, 17, 15, 3);
+		opacity: .5;
+		text-align: center;
+		@media (min-width: $md4 + px){
+			text-align-last: left;
+			order: -1;
+			opacity: 1;
+		}
+	}
+	&__item{
+		position: relative;
+		margin-bottom: 11px;
+	}
+	&__input{
+		width: 100%;
+		@include adaptive(height, 65, 50, 3);
+		background-color: $el;
+		color: #fff;
+		font-weight: 500;
+		@include adaptive(padding, 20, 15, 3);
+		@include adaptive(padding-right, 85, 65, 3);
+		transition: background-color .3s;
+		&::placeholder{
+			color: #fff;
+			@include adaptive(font-size, 18, 16, 3);
+			@include adaptive(line-height, 22, 20, 3);
+			font-weight: 500;
+		}
+		@media (min-width: $md2 + px){
+			&:hover{
+				background-color: #DE774B;
+			}
+			&:focus{
+				background-color: #DE774B;
+			}
+		}
+	}
+	&__button{
+		@include adaptive(height, 65, 50, 3);
+		@include adaptive(width, 65, 50, 3);
+		position: absolute;
+		right: 0;
+		top: 0;
+		background-color: #DE774B;
+		path{
+			transition: all .3s;
+		}
+		@media (min-width: $md2 + px){
+			&:hover{
+				path{
+					fill: #000;
+				}
+			}
+			&:focus{
+				path{
+					fill: #000;
+				}
+			}
+		}
+	}
+}
+.input--mobile,
+.input--desctop{
+
+}
+.input--desctop{
+	display: none;
+}

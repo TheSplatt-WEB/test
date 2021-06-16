@@ -13,7 +13,34 @@
 		<div class="content">
 			@@include('_header.html',{})
 			<main class="main">
-
+				<section class="top">
+					<div class="container">
+						<div class="top__body">
+							<div class="top__info">
+								<div class="top__icon">
+									E-commerce
+								</div>
+								<h1 class="top__title">Интернет-магазин принесет вам максимум прибыли!</h1>
+								<p class="top__descr">Рассказываем что такое интернет магазин и зачем это нужно.</p>
+							</div>
+							<div class="top__form">
+								<form class="top__form form-top" action="#">
+									<div class="form-top__item">
+										<input class="form-top__input input--mobile" id="formTel" name="tel" type="tel" placeholder="Заказать звонок" required>
+										<input class="form-top__input input--desctop" id="formTel" name="tel" type="tel" placeholder="Выйти на связь" required>
+										<button class="form-top__button" type="submit">
+											<svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M8.16726 1.28203C7.89112 1.28203 7.66726 1.05818 7.66726 0.782032C7.66726 0.505891 7.89112 0.282032 8.16726 0.282033L16.444 0.282032C16.6087 0.282033 16.7547 0.361639 16.8458 0.484468C16.9687 0.57557 17.0483 0.721649 17.0483 0.886318L17.0483 9.16304C17.0483 9.43919 16.8244 9.66304 16.5483 9.66304C16.2721 9.66304 16.0483 9.43919 16.0483 9.16304V1.80062L1.15691 16.692C0.961645 16.8873 0.645063 16.8873 0.449801 16.692C0.254539 16.4967 0.254539 16.1801 0.449801 15.9849L15.1526 1.28203L8.16726 1.28203Z" fill="white" />
+											</svg>
+										</button>
+									</div>
+									<label class="form-top__label" for="formTel">Ответим на любой вопрос</label>
+								</form>
+							</div>
+							<img class="top__img" src="img/top_img.png" alt="">
+						</div>
+					</div>
+				</section>
 			</main>
 		</div>
 		@@include('_footer.html',{})

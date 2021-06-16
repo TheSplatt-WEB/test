@@ -65,9 +65,6 @@ ul, li{
 	flex-direction: column;
 	min-height: 100%;
 	overflow-x: hidden;
-	@media (min-width: $md4 + px){
-		overflow-x: visible;
-	}
 }
 .content{
 	flex: 1 0 auto;
@@ -83,4 +80,8 @@ ul, li{
 	margin: 0 auto;
 	padding-left: 20px;
 	padding-right: 20px;
+}
+._plug{
+	width: 100%;
+	@include adaptive(height, 90, 50, 3);
 }
