@@ -76,7 +76,6 @@ function scripts() {
 function stylesLibs() {
 	return src([
 		'node_modules/normalize.css/normalize.css',
-		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
 		'node_modules/slick-carousel/slick/slick.css',
 	])
 		.pipe(autoprefixer({
@@ -93,7 +92,6 @@ function stylesLibs() {
 function scriptsLibs() {
 	return src([
 		'node_modules/jquery/dist/jquery.js',
-		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
 		'node_modules/slick-carousel/slick/slick.js',
 	])
 		.pipe(uglify())

@@ -49,6 +49,11 @@ $(function () {
 	}, function () {
 		$(this).parent().removeClass('hover');
 	});
+	$('.case').hover(function () {
+		$('.case').not($(this)).addClass('hover--not');
+	}, function () {
+		$('.case').not($(this)).removeClass('hover--not');
+	});
 	let i = 0;
 	$(".tab").each(function () {
 		i++;
@@ -66,5 +71,33 @@ $(function () {
 		$(this).addClass('active');
 		$('#' + id).addClass('active-tab').fadeIn();
 		return false;
+	});
+	$('.clients__slider').slick({
+		arrows: true,
+		infinite: true,
+		autoplay: true,
+		dots: false,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		variableWidth: false,
+		responsive: [
+			{
+				breakpoint: 1500,
+				settings: {
+					slidesToShow: 3,
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+				}
+			}]
 	});
 });
