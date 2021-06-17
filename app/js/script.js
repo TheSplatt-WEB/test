@@ -24,4 +24,36 @@ $(function () {
 			$('.menu__body, .menu__btn').removeClass('open');
 		}
 	});
+	$(document).on('click', '.work__link', function (event) {
+		event.preventDefault();
+		if ($('.work__list').hasClass('one')) {
+			$('.work__popup').not($(this).next()).slideUp();
+			$('.work__row').not($(this).parent()).removeClass('open');
+			$('.work__link').not($(this)).removeClass('open');
+		}
+		$(this).next('.work__popup').slideToggle();
+		$(this).parent('.work__row').toggleClass('open');
+		$(this).toggleClass('open');
+	});
+	$(document).on('click', function (e) {
+		if (!$('.popup__body').is(e.target) && $('.work__link').has(e.target).length === 0 &&
+			!$('.popup__title').is(e.target) && $('.popup__title').has(e.target).length === 0 &&
+			!$('.popup__descr').is(e.target) && $('.popup__descr').has(e.target).length === 0 &&
+			!$('.work__name').is(e.target) && $('.work__name').has(e.target).length === 0) {
+			$('.work__popup').slideUp();
+			$('.work__row').removeClass('open');
+		}
+	});
+	$('.work__link').hover(function () {
+		$(this).parent().addClass('hover');
+	}, function () {
+		$(this).parent().removeClass('hover');
+	});
+});
+
+$(document).on('click', function (e) {
+	if (!$('.hint__Link').is(e.target) && $('.hint__Link').has(e.target).length === 0 &&
+		!$('.hint__block').is(e.target) && $('.hint__block').has(e.target).length === 0) {
+		$('.hint__block').fadeOut();
+	}
 });
