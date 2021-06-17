@@ -543,3 +543,145 @@
 		}
 	}
 }
+//End work
+
+//////////////////////////////////////////////////////////////////////////////
+
+//Start advantages
+.advantages{
+		background-image: url(../img/advantages_bg.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		padding-top: 89px;
+		padding-bottom: 100px;
+}
+.tab{
+	@media (min-width: $md2 + px){
+		color: rgba($text, .4);
+		text-decoration: underline;
+		& + &{
+			margin-left: 100px;
+		}
+	}
+	&.active{
+		@media (min-width: $md2 + px){
+			color: $el;
+		}
+	}
+	&__item{
+		@media (max-width: $md2 + px){
+			display: block !important;
+		}
+		@media (min-width: $md3 + px){
+			margin-bottom: 20px;
+		}
+		@media (min-width: $md2 + px){
+			display: none;
+			margin-bottom: 0;
+		}
+		&.active-tab{
+			@media (min-width: $md2 + px){
+				display: block;
+			}
+		}
+	}
+	&__body{
+		@media (min-width: $md3 + px){
+			display: flex;
+			align-items: center;
+		}
+		@media (min-width: $md2 + px){
+			align-items: start;
+		}
+	}
+	&__img{
+		text-align: center;
+		height: 200px;
+		margin-bottom: 30px;
+		@media (min-width: $md3 + px){
+			min-width: 300px;
+			margin-bottom: 0;
+		}
+		@media (min-width: $md2 + px){
+			height: 736px;
+			min-width: auto;
+		}
+		img{
+			height: 100%;
+		}
+	}
+	&__inner{
+		text-align: center;
+		@media (min-width: $md3 + px){
+			text-align: left;
+		}
+		@media (min-width: $md2 + px){
+			margin-left: 30px;
+			margin-top: 115px;
+		}
+		@media (min-width: $md1 + px){
+			margin-left: 125px;
+		}
+	}
+	&__title{
+		@include adaptive(font-size, 26, 16, 3);
+		@include adaptive(line-height, 41, 25, 3);
+		font-weight: 600;
+		@include adaptive(margin-bottom, 40, 30, 3);
+		@media (min-width: $md2 + px){
+			max-width: 588px;
+			width: 100%;
+		}
+	}
+	&__descr{
+		@include adaptive(font-size, 18, 12, 3);
+		@include adaptive(line-height, 29, 19, 3);
+		font-weight: 400;
+		margin-bottom: 40px;
+		@media (min-width: $md3 + px){
+			margin-bottom: 0;
+		}
+		@media (min-width: $md2 + px){
+			max-width: 588px;
+			width: 100%;
+			margin-bottom: 40px;
+		}
+	}
+	&__images{
+		display: none;
+		@media (min-width: $md2 + px){
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			margin-left: -40px;
+			picture{
+				margin-left: 40px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+.tab--mobile{
+	@media (min-width: $md2 + px){
+		display: none;
+	}
+}
+.tab--desctop{
+	display: none;
+	@media (min-width: $md2 + px){
+		display: block;
+	}
+}
+.tabs{
+	display: none;
+	@media (min-width: $md2 + px){
+		display: block;
+		text-align: center;
+	}
+}
+//End advantages
+
+//////////////////////////////////////////////////////////////////////////////
+
+//Start cases
